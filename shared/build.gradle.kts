@@ -27,6 +27,15 @@ kotlin {
         commonMain.dependencies {
             //put your multiplatform dependencies here
         }
+
+        androidMain.dependencies {
+            implementation(libs.lifecycle.viewmodel.ktx)
+        }
+
+        iosMain.dependencies {
+
+        }
+
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
