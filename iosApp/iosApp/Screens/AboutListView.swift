@@ -20,9 +20,9 @@ struct AboutListView: View {
         platform.logSystemInfo()
         
         var result:[RowItem]=[
-            .init(title: "Operating System", subTilte: "\(platform.osName) \(platform.osVersion)"),
-            .init(title: "Device", subTilte: platform.deviceModel),
-            .init(title: "Density", subTilte: "@\(platform.density)x")
+            .init(title: "Operating System", subTitle: "\(platform.osName) \(platform.osVersion)"),
+            .init(title: "Device", subTitle: platform.deviceModel),
+            .init(title: "Density", subTitle: "@\(platform.density)x")
         ]
         return result
     }()
@@ -34,7 +34,7 @@ struct AboutListView: View {
                     Text(item.title)
                         .font(.footnote)
                         .foregroundStyle(.secondary)
-                    Text(item.subTilte)
+                    Text(item.subTitle)
                         .font(.body)
                         .foregroundStyle(.primary)
                 }
