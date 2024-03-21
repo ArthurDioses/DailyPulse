@@ -111,7 +111,3 @@ struct ArticleItemView:View {
         .padding(16)
     }
 }
-
-#Preview {
-    ArticlesScreen()
-}
