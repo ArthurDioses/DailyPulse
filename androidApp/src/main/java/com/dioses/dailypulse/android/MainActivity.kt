@@ -18,15 +18,13 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val articleViewModel:ArticlesViewModel by viewModels()
-
         setContent {
             MyApplicationTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AppScaffold(articlesViewModel = articleViewModel)
+                    AppScaffold()
                 }
             }
         }
