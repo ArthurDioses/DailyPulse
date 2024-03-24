@@ -33,15 +33,18 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.kotlinx.datetime)
             implementation(libs.koin.core)
+            implementation(libs.sql.coroutines.extensions)
         }
 
         androidMain.dependencies {
             implementation(libs.lifecycle.viewmodel.ktx)
             implementation(libs.ktor.client.android)
+            implementation(libs.sql.android.driver)
         }
 
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
+            implementation(libs.sql.native.driver)
         }
 
         commonTest.dependencies {
