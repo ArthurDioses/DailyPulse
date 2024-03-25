@@ -1,5 +1,7 @@
 package com.dioses.dailypulse.articles.di
 
+import com.dioses.dailypulse.articles.ArticlesDatabaseSource
+import com.dioses.dailypulse.articles.ArticlesRepository
 import com.dioses.dailypulse.articles.ArticlesService
 import com.dioses.dailypulse.articles.ArticlesUseCase
 import com.dioses.dailypulse.articles.ArticlesViewModel
@@ -16,4 +18,6 @@ val articlesModule = module {
     single<ArticlesService> { ArticlesService(get()) }
     single<ArticlesUseCase> { ArticlesUseCase(get()) }
     single<ArticlesViewModel> { ArticlesViewModel(get()) }
+    single<ArticlesDatabaseSource> { ArticlesDatabaseSource(get()) }
+    single<ArticlesRepository> { ArticlesRepository(get(), get()) }
 }
