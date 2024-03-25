@@ -13,7 +13,7 @@ import org.koin.core.context.startKoin
  ****/
 
 fun initKoin() {
-    val module = sharedKoinModule
+    val module = sharedKoinModule + databaseModule
 
     startKoin {
         modules(module)
