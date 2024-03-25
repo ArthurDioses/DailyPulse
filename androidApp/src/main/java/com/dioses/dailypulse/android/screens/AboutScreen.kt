@@ -31,15 +31,15 @@ fun AboutScreen(
     onUpButtonClick: () -> Unit,
 ) {
     Column {
-        Toolbar { onUpButtonClick() }
+        Toolbar("About Device") { onUpButtonClick() }
         ContentView()
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Toolbar(onUpButtonClick: () -> Unit) {
-    TopAppBar(title = { Text(text = "About Device") },
+fun Toolbar(title: String, onUpButtonClick: () -> Unit) {
+    TopAppBar(title = { Text(text = title) },
         navigationIcon = {
             IconButton(onClick = { onUpButtonClick() }) {
                 Icon(

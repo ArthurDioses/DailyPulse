@@ -12,6 +12,7 @@ import androidx.navigation.compose.rememberNavController
 import com.dioses.dailypulse.android.screens.AboutScreen
 import com.dioses.dailypulse.android.screens.ArticlesScreen
 import com.dioses.dailypulse.android.screens.Screens
+import com.dioses.dailypulse.android.screens.SourcesScreen
 
 /****
  * Project: DailyPulse
@@ -46,12 +47,17 @@ fun AppNavHost(
     ) {
         composable(Screens.ARTICLES.route) {
             ArticlesScreen(
+                onSourceButtonClick = { navController.navigate(Screens.SOURCES.route) },
                 onAboutButtonClick = { navController.navigate(Screens.ABOUT_DEVICE.route) },
             )
         }
 
         composable(Screens.ABOUT_DEVICE.route) {
             AboutScreen(onUpButtonClick = { navController.popBackStack() })
+        }
+
+        composable(Screens.SOURCES.route) {
+            SourcesScreen(onUpButtonClick = { navController.popBackStack() })
         }
     }
 }
