@@ -1,6 +1,7 @@
 package com.dioses.dailypulse.di
 
 import com.dioses.dailypulse.articles.di.articlesModule
+import com.dioses.dailypulse.articles.di.sourcesModule
 
 /****
  * Project: DailyPulse
@@ -11,5 +12,6 @@ import com.dioses.dailypulse.articles.di.articlesModule
 
 val sharedKoinModule = listOf(
     articlesModule,
+    sourcesModule,
     networkModule
 )
