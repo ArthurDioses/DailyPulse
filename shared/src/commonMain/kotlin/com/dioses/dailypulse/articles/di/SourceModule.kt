@@ -4,7 +4,7 @@ import com.dioses.dailypulse.articles.application.SourceUseCase
 import com.dioses.dailypulse.articles.data.SourceDatabaseSource
 import com.dioses.dailypulse.articles.data.SourceRepository
 import com.dioses.dailypulse.articles.data.SourcesService
-import com.dioses.dailypulse.articles.presentation.SourceViewModel
+import com.dioses.dailypulse.articles.presentation.SourcesViewModel
 import org.koin.dsl.module
 
 /****
@@ -17,7 +17,7 @@ import org.koin.dsl.module
 val sourcesModule = module {
     single<SourcesService> { SourcesService(get()) }
     single<SourceUseCase> { SourceUseCase(get()) }
-    single<SourceViewModel> { SourceViewModel(get()) }
+    single<SourcesViewModel> { SourcesViewModel(get()) }
     single<SourceDatabaseSource> { SourceDatabaseSource(get()) }
     single<SourceRepository> { SourceRepository(get(), get()) }
 }

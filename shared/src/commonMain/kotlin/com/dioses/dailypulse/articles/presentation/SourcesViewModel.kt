@@ -12,14 +12,14 @@ import kotlinx.coroutines.launch
  * Created by Arthur Dioses Reto on 25/03/24 at 10:12 AM
  * All rights reserved 2024.
  ****/
-class SourceViewModel(
+class SourcesViewModel(
     private val useCase: SourceUseCase,
 ) : BaseViewModel() {
 
-    private val _sourceState: MutableStateFlow<SourcesState> =
+    private val _sourcesState: MutableStateFlow<SourcesState> =
         MutableStateFlow(SourcesState(listOf(), loading = true, null))
 
-    val sourceState: StateFlow<SourcesState> get() = _sourceState
+    val sourcesState: StateFlow<SourcesState> get() = _sourcesState
 
     init {
         getSources()
@@ -27,16 +27,16 @@ class SourceViewModel(
 
     private fun getSources() {
         scope.launch {
-            _sourceState.emit(
+            _sourcesState.emit(
                 SourcesState(
-                    sources = _sourceState.value.sources,
+                    sources = _sourcesState.value.sources,
                     loading = true,
                     null
                 )
             )
             val fetchSources = useCase.getSources()
 
-            _sourceState.emit(SourcesState(sources = fetchSources))
+            _sourcesState.emit(SourcesState(sources = fetchSources))
         }
     }
 }

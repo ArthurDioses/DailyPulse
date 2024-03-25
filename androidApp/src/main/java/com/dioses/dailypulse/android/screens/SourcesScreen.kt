@@ -19,7 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.dioses.dailypulse.articles.application.Source
-import com.dioses.dailypulse.articles.presentation.SourceViewModel
+import com.dioses.dailypulse.articles.presentation.SourcesViewModel
 import org.koin.androidx.compose.getViewModel
 
 /****
@@ -31,9 +31,9 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun SourcesScreen(
     onUpButtonClick: () -> Unit,
-    sourceViewModel: SourceViewModel = getViewModel(),
+    sourcesViewModel: SourcesViewModel = getViewModel(),
 ) {
-    val sourcesState = sourceViewModel.sourceState.collectAsState()
+    val sourcesState = sourcesViewModel.sourcesState.collectAsState()
 
     Column {
         Toolbar("Sources") { onUpButtonClick() }
@@ -41,16 +41,16 @@ fun SourcesScreen(
             ErrorMessage(error = sourcesState.value.error!!)
         }
         if (sourcesState.value.sources.isNotEmpty()) {
-            ResourcesListView(sourceViewModel)
+            ResourcesListView(sourcesViewModel)
         }
     }
 
 }
 
 @Composable
-fun ResourcesListView(viewModel: SourceViewModel) {
+fun ResourcesListView(viewModel: SourcesViewModel) {
     LazyColumn(modifier = Modifier.fillMaxSize()) {
-        items(viewModel.sourceState.value.sources) { source ->
+        items(viewModel.sourcesState.value.sources) { source ->
             SourceItemView(source)
         }
     }
