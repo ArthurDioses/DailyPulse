@@ -1,10 +1,10 @@
 package com.dioses.dailypulse.articles.di
 
-import com.dioses.dailypulse.articles.ArticlesDatabaseSource
-import com.dioses.dailypulse.articles.ArticlesRepository
-import com.dioses.dailypulse.articles.ArticlesService
-import com.dioses.dailypulse.articles.ArticlesUseCase
-import com.dioses.dailypulse.articles.ArticlesViewModel
+import com.dioses.dailypulse.articles.data.ArticlesDatabaseSource
+import com.dioses.dailypulse.articles.data.ArticlesRepository
+import com.dioses.dailypulse.articles.data.ArticlesService
+import com.dioses.dailypulse.articles.application.ArticlesUseCase
+import com.dioses.dailypulse.articles.presentation.ArticlesViewModel
 import org.koin.dsl.module
 
 /****

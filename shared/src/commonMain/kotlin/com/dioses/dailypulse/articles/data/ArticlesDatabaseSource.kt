@@ -1,4 +1,4 @@
-package com.dioses.dailypulse.articles
+package com.dioses.dailypulse.articles.data
 
 import dioses.dailypulse.db.DailyPulseDatabase
 

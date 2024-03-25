@@ -1,4 +1,4 @@
-package com.dioses.dailypulse.articles
+package com.dioses.dailypulse.articles.application
 
 /****
  * Project: DailyPulse

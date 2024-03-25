@@ -1,4 +1,6 @@
-package com.dioses.dailypulse.articles
+package com.dioses.dailypulse.articles.presentation
+
+import com.dioses.dailypulse.articles.application.Article
 
 data class ArticlesState(
     val articles: List<Article> = listOf(),

@@ -12,7 +12,6 @@ import androidx.navigation.compose.rememberNavController
 import com.dioses.dailypulse.android.screens.AboutScreen
 import com.dioses.dailypulse.android.screens.ArticlesScreen
 import com.dioses.dailypulse.android.screens.Screens
-import com.dioses.dailypulse.articles.ArticlesViewModel
 
 /****
  * Project: DailyPulse

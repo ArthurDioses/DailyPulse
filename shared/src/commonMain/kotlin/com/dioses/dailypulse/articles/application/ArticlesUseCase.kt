@@ -1,5 +1,7 @@
-package com.dioses.dailypulse.articles
+package com.dioses.dailypulse.articles.application
 
+import com.dioses.dailypulse.articles.data.ArticleRaw
+import com.dioses.dailypulse.articles.data.ArticlesRepository
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
