@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidLibrary)
     id("co.touchlab.skie") version "0.6.2"
     kotlin("plugin.serialization") version "1.9.23"
+    alias(libs.plugins.sqlDelight)
 }
 
 kotlin {
@@ -62,5 +63,13 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
+    }
+}
+
+sqldelight {
+    databases {
+        create(name = "DailyPulseDatabase") {
+            packageName.set("dioses.dailypulse.db")
+        }
     }
 }
