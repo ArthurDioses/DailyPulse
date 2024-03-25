@@ -3,6 +3,7 @@ agp = "8.3.1"
 coilCompose = "2.6.0"
 kotlin = "1.9.20"
 compose = "1.5.4"
+accompanistSwiperefresh = "0.24.13-rc"
 compose-compiler = "1.5.4"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.0"
@@ -15,6 +16,8 @@ koin = "3.2.0"
 sqlDelight = "2.0.0"
 
 [libraries]
+accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanistSwiperefresh" }
+
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
