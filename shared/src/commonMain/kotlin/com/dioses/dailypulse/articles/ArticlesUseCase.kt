@@ -14,9 +14,9 @@ import kotlin.math.abs
  * Created by Arthur Dioses Reto on 21/03/24 at 11:30 PM
  * All rights reserved 2024.
  ****/
-class ArticlesUseCase(private val service: ArticlesService) {
+class ArticlesUseCase(private val repo: ArticlesRepository) {
     suspend fun getArticles(): List<Article> {
-        val articlesRaw = service.fetchArticles()
+        val articlesRaw = repo.getArticles()
 
         return mapArticles(articlesRaw)
     }
